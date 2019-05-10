@@ -3,14 +3,14 @@ import Header from "./layout/Header";
 import Model from "./layout/Model";
 import Form from "./common/Form";
 import Example from "./Example";
+import Login from "./auth/Login";
 
 class App extends Component {
     render() {
         return (
             <div>
-                <Header/>
                 <div className="container">
-                    <Form/>
+                    <Login/>
                 </div>
             </div>
         );
