@@ -8,32 +8,27 @@ const divStyle = {
 class Header extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-sm mb-4">
-                <div className="collapse navbar-collapse" id="mobile-nav">
+            <div>
+                <header>
                     <div className="container">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item">
-                                <img src={LogoImage} className="logo"/>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style={divStyle}>
-                        <div className="collapse navbar-collapse">
-                            <ul className="navbar-nav gu-ul">
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="#">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Features</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">Pricing</a>
-                                </li>
-                            </ul>
+                        <div className="pull-left logo">
+                            <img src={LogoImage} className="logo"/>
                         </div>
+                        <nav className="nav-menu-container">
+                            <ul className="nav-menu">
+                                <li className="menu-active"><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Login/SignUp</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                </div>
-            </nav>
+                </header>
+                <section className="hero">
+
+                </section>
+            </div>
         );
     }
 }
