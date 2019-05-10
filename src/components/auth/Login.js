@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "../../styles/login/Login.scss";
+import Logo from '../../img/logo.png';
 
 export default class Login extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ export default class Login extends Component {
 	  username: "",
 	  email: "",
 	  password: "",
-	  keepSiginedIn: true,
+	  keepSignedIn: true,
 	  register: false,
 	  userType: 0
 	};
@@ -21,20 +22,20 @@ export default class Login extends Component {
 		this.setState({[event.target.id]: !this.state[event.target.id]});
 	  else
 		this.setState({[event.target.id]: event.target.value});
-  }
+  };
   handleOptionChange = changeEvent => {
 	  this.setState({register: JSON.parse(changeEvent.target.value)});
-  }
+  };
   handleTypeChange = changeEvent => {
 	  this.setState({userType: JSON.parse(changeEvent.target.value)});
-  }
+  };
   
   handleSubmit = event => {
 	  event.preventDefault();
-  }
+  };
   handleForgotPassword = event => {
 	  event.preventDefault();
-  }
+  };
 
   render() {
 	const hideClass = this.state.register ? "hide-sign-in" : "hide-sign-up";
@@ -43,7 +44,7 @@ export default class Login extends Component {
 	<div className="login-wrap">
 		<div className="login">
 			<div className="img-wrap">	
-				<img className="logo" src={ require('../../img/logo.png') } />
+				<img className="logo" src={Logo} />
 			</div>
 			<div className="login-form">
 				<form onSubmit={this.handleSubmit}>
@@ -58,8 +59,8 @@ export default class Login extends Component {
 							<input id="password" required type="password" placeholder="Password" pattern = "(?=^.{6,}$).*$" title = "Min 6 characters" value={this.state.password} onChange={this.handleChange}/>
 						</FormGroup>
 						<FormGroup className={"checkbox-wrap sign-in-fields " + hideClass}>
-							<input id="keepSiginedIn" autoFocus type="checkbox" checked={this.state.keepSiginedIn} onChange={this.handleChange}/>
-							<label htmlFor="keepSiginedIn" className="checkbox-label"><span>Keep me Signed in</span></label>
+							<input id="keepSignedIn" autoFocus type="checkbox" checked={this.state.keepSignedIn} onChange={this.handleChange}/>
+							<label htmlFor="keepSignedIn" className="checkbox-label"><span>Keep me Signed in</span></label>
 						</FormGroup>
 						<FormGroup className={"checkbox-wrap sign-up-fields " + hideClass}>
 							<input id="consumer" type="radio" name="usertype" className="consumer" value="0" checked={this.state.userType === 0} onChange={this.handleTypeChange}/><label htmlFor="consumer" className="checkbox-label">User</label>
