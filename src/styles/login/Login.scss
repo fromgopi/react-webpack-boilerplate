@@ -1,17 +1,24 @@
 body{
 	margin:0;
-	font:600 16px/18px 'Open Sans',sans-serif;
+	font:600 16px/18px;
 }
 #root::before {
 	height: 50px;
 	content: '';
 	display: block;	
 }
+.logo {
+	height: 32px;
+}
+.img-wrap {
+	text-align: center;
+	padding-bottom: 50px;
+}
 .login-wrap{
 	width:100%;
 	margin:auto;
 	max-width:450px;
-	min-height:400px;
+	min-height:500px;
 	position:relative;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
@@ -21,36 +28,13 @@ body{
 	position:absolute;
 	padding:17% 13% 10% 13%;
 	border: 1px solid #ccc;
-	border-radius: 4px;
 	box-sizing: border-box;
 	padding: 55px;
 }
-.login .tab{
-	text-transform:uppercase;
-}
-.login .sign-in, .login .sign-up{
-	display:none;
-}
-.login .tab{
-	font-size:22px;
-	margin-right:15px;
-	padding-bottom:5px;
-	margin:0 15px 10px 0;
-	display:inline-block;
-	border-bottom:2px solid transparent;
-}
-.login .sign-in:checked + .tab,
-.login .sign-up:checked + .tab{
-	color:#1161ee;
-	border-color:#1161ee;
-}
-.form-group, .checkbox-wrap  {
+.form-group  {
 	margin-bottom:15px;
 }
-.login .tab {
-	margin-bottom: 30px;
-}
-.login-form .form-group input:not([type="checkbox"]) {
+.login-form .form-group input:not([type="checkbox"]):not([type="radio"]) {
 	width:100%;
 	display:block;
 	padding:10px 20px;
@@ -64,7 +48,8 @@ body{
 }
 .checkbox-label {
 	font-size: small;
-	padding-right: 10px;
+	margin-left: 6px;
+	margin-bottom: -3px;
 }
 button[type=submit] {
   width: 100%;
@@ -76,11 +61,21 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
-.login .sign-up:checked + .tab + .login-form .sign-in-fields {
+.sign-up-fields.hide-sign-up, .sign-in-fields.hide-sign-in {
 	display: none;
 }
-.login .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-up-fields {
-	display: none;
+input[name="tab"] {
+	display:none;
 }
-
-/*rotate css*/
+.links-wrap {
+	text-align: right;
+}
+.label-wrap {
+	margin: 10px;
+}
+.link-label {
+	width: fit-content;
+	font-size: small;
+	color: #1161ee;
+	cursor: pointer;
+}
