@@ -11,10 +11,11 @@ export default class Login extends Component {
 	  username: "",
 	  email: "",
 	  password: "",
-	  keepSignedIn: true,
+	  keepSignedIn: false,
 	  register: false,
 	  userType: 0
 	};
+	this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = event => {
@@ -39,6 +40,7 @@ export default class Login extends Component {
 
   render() {
 	const hideClass = this.state.register ? "hide-sign-in" : "hide-sign-up";
+	console.log(hideClass)
 	const btnName = this.state.register ? "Register" : "Login";
 	return (
 	<div className="login-wrap">
@@ -50,17 +52,42 @@ export default class Login extends Component {
 				<form onSubmit={this.handleSubmit}>
 					<div className="fields-wrap">
 						<FormGroup>
-							<input id="username" required autoFocus type="text" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
+							<input
+								id="username"
+								required autoFocus
+								type="text"
+								placeholder="Username"
+								value={this.state.username}
+								onChange={this.handleChange}
+							/>
 						</FormGroup>
 						<FormGroup className={"sign-up-fields " + hideClass}>
-							<input id="email" required autoFocus type="email" placeholder="Email" value={this.state.email} onChange={this.handleChange}/>
+							<input
+								id="email"
+								required autoFocus
+								type="email"
+								placeholder="Email"
+								value={this.state.email}
+								onChange={this.handleChange}
+							/>
 						</FormGroup>
 						<FormGroup>
-							<input id="password" required type="password" placeholder="Password" pattern = "(?=^.{6,}$).*$" title = "Min 6 characters" value={this.state.password} onChange={this.handleChange}/>
+							<input
+								id="password"
+								required
+								type="password"
+								placeholder="Password"
+								pattern = "(?=^.{6,}$).*$"
+								title = "Min 6 characters"
+								value={this.state.password}
+								onChange={this.handleChange}
+							/>
 						</FormGroup>
 						<FormGroup className={"checkbox-wrap sign-in-fields " + hideClass}>
-							<input id="keepSignedIn" autoFocus type="checkbox" checked={this.state.keepSignedIn} onChange={this.handleChange}/>
-							<label htmlFor="keepSignedIn" className="checkbox-label"><span>Keep me Signed in</span></label>
+							<input id="keepSignedIn" autoFocus type="checkbox" defaultChecked={this.state.keepSignedIn} onChange={this.handleChange}/>
+							<label htmlFor="keepSignedIn" className="checkbox-label">
+								<span>Keep me signed in</span>
+							</label>
 						</FormGroup>
 						<FormGroup className={"checkbox-wrap sign-up-fields " + hideClass}>
 							<input id="consumer" type="radio" name="usertype" className="consumer" value="0" checked={this.state.userType === 0} onChange={this.handleTypeChange}/><label htmlFor="consumer" className="checkbox-label">User</label>
