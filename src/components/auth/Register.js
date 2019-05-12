@@ -13,9 +13,9 @@ class Register extends Component {
             password: '',
             is_active: 1,
             errors: {}
-        }
-        this.onChange = this.onChange.bind();
-        this.onSubmit = this.onSubmit.bind();
+        };
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onChange(e) {
@@ -29,22 +29,54 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="register">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-8 m-auto">
-                            <h1 className="display-4 text-center">Sign Up</h1>
-                            <p className="lead text-center">Create your Example account</p>
-                            <form noValidate onSubmit={this.onSubmit}>
-                                <TextFieldGroup
-                                    placeholder='First Name'
-                                    name='first_name'
-                                    type='name'
-                                    value={this.state.firstName}
-                                    onChange={this.onChange}
-                                />
-                            </form>
-                        </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-4 m-auto">
+                        <h1 className="display-4 text-center">Sign Up</h1>
+                        <p className="lead text-center">Create your Example account</p>
+                        <form noValidate onSubmit={this.onSubmit}>
+
+                            <TextFieldGroup
+                                placeholder='First Name'
+                                name='firstName'
+                                type='name'
+                                value={this.state.firstName}
+                                onChange={this.onChange}
+                            />
+
+                            <TextFieldGroup
+                                placeholder='Last Name'
+                                name='lastName'
+                                type='name'
+                                value={this.state.lastName}
+                                onChange={this.onChange}
+                            />
+
+                            <TextFieldGroup
+                                placeholder='Username'
+                                name='username'
+                                type='name'
+                                value={this.state.username}
+                                onChange={this.onChange}
+                            />
+
+                            <TextFieldGroup
+                                placeholder='Email Address'
+                                name='email'
+                                type='email'
+                                value={this.state.email}
+                                onChange={this.onChange}
+                            />
+
+                            <TextFieldGroup
+                                placeholder='Password'
+                                name='password'
+                                type='password'
+                                value={this.state.password}
+                                onChange={this.onChange}
+                            />
+                            <input type="submit" className="btn btn-info btn-block mt-4"/>
+                        </form>
                     </div>
                 </div>
             </div>
