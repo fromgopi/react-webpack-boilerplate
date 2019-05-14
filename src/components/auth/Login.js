@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
-import "../../styles/login/Login.scss";
 import Logo from '../../img/logo.png';
 
 export default class Login extends Component {
