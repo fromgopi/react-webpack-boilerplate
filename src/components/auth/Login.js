@@ -15,7 +15,6 @@ export default class Login extends Component {
 	  register: false,
 	  userType: 0
 	};
-	this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = event => {
@@ -32,6 +31,7 @@ export default class Login extends Component {
   };
   
   handleSubmit = event => {
+  	console.log(event);
 	  event.preventDefault();
   };
   handleForgotPassword = event => {
