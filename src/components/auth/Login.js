@@ -36,13 +36,13 @@ export default class Login extends Component {
   handleForgotPassword = event => {
 	  event.preventDefault();
   };
-//<img className="logo" src={Logo} />
+//
   render() {
 	return (
 	<div className="login-wrap">
 		<div className="login">
 			<div className="img-wrap">	
-				
+				<img className="login-logo" src={Logo} />
 			</div>
 			<div className="login-form">
 				<form onSubmit={this.handleSubmit}>
