@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
-import LogoImage from '../../img/medium.png'
-
-const divStyle = {
-    float: 'right'
-};
+import LogoImage from '../../img/logo.png'
+import Login from '../auth/Login'
+import Popup from "reactjs-popup";
 
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className="fixed-header">
                 <header>
-                    <div className="container">
-                        <div className="pull-left logo">
+                    <div className="header-container">
+                        <div>
                             <img src={LogoImage} className="logo"/>
                         </div>
                         <nav className="nav-menu-container">
@@ -20,13 +18,12 @@ class Header extends Component {
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">Team</a></li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="#">Login/SignUp</a></li>
+                                <li><Popup trigger={<a href="#">Login/SignUp</a>} position="center center" modal={true} className="login"><Login/></Popup></li>
                             </ul>
                         </nav>
                     </div>
                 </header>
                 <section className="hero">
-
                 </section>
             </div>
         );

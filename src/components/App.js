@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Login from "./auth/Login";
-import Register from "./auth/Register";
 import Header from "./layout/Header";
 
 class App extends Component {
@@ -8,7 +6,6 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <Login/>
             </div>
         );
     }

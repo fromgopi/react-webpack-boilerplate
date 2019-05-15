@@ -1,25 +1,24 @@
-$bg-img: url('../img/hero-bg.jpg');
-
-header {
-  padding: 30px 0;
-  height: 92px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 1s;
-  z-index: 997;
+.fixed-header{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	/*background: #e9f9f0;*/
+	box-shadow:0 1px 15px 0 rgba(0,0,0,.24);
+}
+.header-container{
+	padding: 20px;
 }
 
-header .logo {
-  float: left;
-  height: 92px;
-  width: 151px;
+.logo {
+	height: 32px;
+	float: left;
+	margin-top: -10px;
 }
+
 
 .nav-menu-container {
   float: right;
-  margin: 0;
 }
 
 @media (max-width: 786px) {
