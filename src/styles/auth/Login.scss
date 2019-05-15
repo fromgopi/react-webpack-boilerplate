@@ -2,20 +2,19 @@
 @import "styles/common/BitField";
 
 .login-content{
-	background: none !important;
-	border: none !important;
+	border: 0 !important;
+	padding: 0 !important;
+	width:400px !important;
+	height:450px !important;
 }
 .login-wrap{
 	width:100%;
 	background: white;
 	margin:auto;
-	max-width:400px;
-	min-height:475px;
+	width:400px;
+	height:450px;
 	position:relative;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
 }
 .login-wrap .login{
 	width:100%;
@@ -24,26 +23,16 @@
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	padding: 55px;
-	padding:17% 13% 10% 13%;
 }
 /*logo*/
 .login .img-wrap {
 	text-align: center;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 }
 .login .login-logo {
-	height: 32px;
+	height: 36px;
 }
 /*logo*/
-
-/*data controls*/
-.checkbox-wrap {
-	display: flex;
-}
-.checkbox-label {
-	font-size: small;
-}
-/*data controls*/
 
 /*link conrols*/
 .login-form button[type=submit] {
@@ -67,5 +56,8 @@
 	font-size: small;
 	color: #1161ee;
 	cursor: pointer;
+}
+.link-label.pre{
+	color: inherit;
 }
 /*link conrols*/
