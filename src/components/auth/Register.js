@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TextFieldGroup from "../common/TextFieldGroup";
+import TextField from "../common/TextField";
 
 class Register extends Component {
 
@@ -36,7 +36,7 @@ class Register extends Component {
                         <p className="lead text-center">Create your Example account</p>
                         <form noValidate onSubmit={this.onSubmit}>
 
-                            <TextFieldGroup
+                            <TextField
                                 placeholder='First Name'
                                 name='firstName'
                                 type='name'
@@ -44,7 +44,7 @@ class Register extends Component {
                                 onChange={this.onChange}
                             />
 
-                            <TextFieldGroup
+                            <TextField
                                 placeholder='Last Name'
                                 name='lastName'
                                 type='name'
@@ -52,7 +52,7 @@ class Register extends Component {
                                 onChange={this.onChange}
                             />
 
-                            <TextFieldGroup
+                            <TextField
                                 placeholder='Username'
                                 name='username'
                                 type='name'
@@ -60,7 +60,7 @@ class Register extends Component {
                                 onChange={this.onChange}
                             />
 
-                            <TextFieldGroup
+                            <TextField
                                 placeholder='Email Address'
                                 name='email'
                                 type='email'
@@ -68,7 +68,7 @@ class Register extends Component {
                                 onChange={this.onChange}
                             />
 
-                            <TextFieldGroup
+                            <TextField
                                 placeholder='Password'
                                 name='password'
                                 type='password'
