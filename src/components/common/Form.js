@@ -23,7 +23,7 @@ class Form extends Component {
             items: items,
             firstName: '',
             lastName: ''
-        })
+        });
         console.log(this.state);
     };
 
