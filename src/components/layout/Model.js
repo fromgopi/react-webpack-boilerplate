@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Button} from 'react-bootstrap';
-import Register from "../auth/Register";
+import Modal from 'react-modal';
 
 class Model extends Component {
     constructor () {
@@ -9,41 +8,43 @@ class Model extends Component {
             showModal: false
         };
 
-        this.handleShow = this.handleShow.bind(this);
-        this.handleClose = this.handleClose.bind(this);
-
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
     }
 
-    handleClose() {
-        this.setState({ show: false });
+    componentWillMount() {
+
+        Modal.setAppElement('body')
     }
 
-    handleShow() {
-        this.setState({ show: true });
+
+    handleOpenModal () {
+        this.setState({ showModal: true });
+    }
+
+    handleCloseModal () {
+        this.setState({ showModal: false });
     }
 
     render() {
         return (
             <div>
-                <button className="primary" onClick={this.handleShow}>
-                    Launch demo modal
-                </button>
-
-                <Modal show={this.state.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Register/>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
-                            Close
-                        </Button>
-                        <Button variant="primary" onClick={this.handleClose}>
-                            Save Changes
-                        </Button>
-                    </Modal.Footer>
+                <button type="button" onClick={this.handleOpenModal}>open</button>
+                <Modal isOpen={this.state.showModal} contentLabel="Simple Modal" ariaHideApp={false}>
+                    <div className="container">
+                        <div className="row">
+                            <form className="col s12">
+                                <div className="row">
+                                    <div className="input-field col s6">
+                                        <input placeholder="Username" value="" id="name"
+                                               type="text" className="active validate" required/>
+                                        <label htmlFor="name">Username</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button type="button" onClick={this.handleCloseModal}>Close</button>
                 </Modal>
             </div>
         );
