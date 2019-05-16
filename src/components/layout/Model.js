@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Modal from 'react-modal';
+import {Modal, Button} from 'react-bootstrap';
+import Register from "../auth/Register";
 
 class Model extends Component {
     constructor () {
@@ -8,43 +9,41 @@ class Model extends Component {
             showModal: false
         };
 
-        this.handleOpenModal = this.handleOpenModal.bind(this);
-        this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+
     }
 
-    componentWillMount() {
-
-        Modal.setAppElement('body')
+    handleClose() {
+        this.setState({ show: false });
     }
 
-
-    handleOpenModal () {
-        this.setState({ showModal: true });
-    }
-
-    handleCloseModal () {
-        this.setState({ showModal: false });
+    handleShow() {
+        this.setState({ show: true });
     }
 
     render() {
         return (
             <div>
-                <button type="button" onClick={this.handleOpenModal}>open</button>
-                <Modal isOpen={this.state.showModal} contentLabel="Simple Modal" ariaHideApp={false}>
-                    <div className="container">
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s6">
-                                        <input placeholder="Username" value="" id="name"
-                                               type="text" className="active validate" required/>
-                                        <label htmlFor="name">Username</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <button type="button" onClick={this.handleCloseModal}>Close</button>
+                <button className="primary" onClick={this.handleShow}>
+                    Launch demo modal
+                </button>
+
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Register/>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={this.handleClose}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
                 </Modal>
             </div>
         );
