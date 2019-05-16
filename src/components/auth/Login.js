@@ -17,7 +17,7 @@ export default class Login extends Component {
 
   handleChange = event => {
 	  var value = (event.target.type === 'checkbox') ? event.target.checked : event.target.value;	  
-	  this.setState({[event.target.id]: value});
+	  this.setState({[event.target.name]: value});
   };  
   handleSubmit = event => {
 	  event.preventDefault();
@@ -35,7 +35,7 @@ export default class Login extends Component {
 					<div className="form-wrap">
 						<TextField 
 							required autoFocus 
-							id="username" 
+							name="username" 
 							type="text" 
 							placeholder="Username" 
 							value={this.state.username} 
@@ -43,7 +43,7 @@ export default class Login extends Component {
 						/>
 						<TextField 
 							required 
-							id="password" 
+							name="password" 
 							type="password" 
 							placeholder="Password" 
 							pattern = "(?=^.{6,}$).*$" 
@@ -52,13 +52,13 @@ export default class Login extends Component {
 							onChange={this.handleChange}
 						/>
 						<BitField 
-							id="keepsignedin" 
+							name="keepsignedin" 
 							type="checkbox" 
 							checked={this.state.keepSignedIn} 
 							onChange={this.handleChange} 
-							text="Keep Signed In"/>
+							displaytext="Keep Signed In"/>
 						<button 
-							id="submitbtn" 
+							name="submitbtn" 
 							type="submit" 
 							className="login-btn">
 							<span className="">Login</span>
