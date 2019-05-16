@@ -3,7 +3,7 @@ import Logo from '../../img/logo.png';
 import TextField from '../common/TextField';
 import BitField from '../common/BitField';
 
-export default class Login extends Component {
+class Login extends Component {
 	state = {
 	  username: "",
 	  password: "",
