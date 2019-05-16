@@ -3,12 +3,16 @@ import Logo from '../../img/logo.png';
 import TextField from '../common/TextField';
 import BitField from '../common/BitField';
 
-class Login extends Component {
-	state = {
+export default class Login extends Component {
+	constructor(props) {
+	super(props);
+
+	this. state = {
 	  username: "",
 	  password: "",
 	  keepSignedIn: false,
 	  userType: 0
+	};
   }
 
   handleChange = event => {
