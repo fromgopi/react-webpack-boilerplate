@@ -7,10 +7,11 @@ class Login extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
+		this. state = {
 			username: "",
 			password: "",
-			keepSignedIn: false
+			keepSignedIn: false,
+			userType: 0
 		};
 	}
 
@@ -19,13 +20,13 @@ class Login extends Component {
 	}
 
 
-	handleChange = e => {
-		var value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
-		this.setState({[e.target.name]: value});
+	handleChange = event => {
+		var value = (event.target.type === 'checkbox') ? event.target.checked : event.target.value;
+		this.setState({[event.target.name]: value});
 	};
-	handleSubmit = e => {
+	handleSubmit = event => {
 		//Todo: Call backend server with userData and key in the header.
-		e.preventDefault();
+		event.preventDefault();
 	};
 
 	render() {
