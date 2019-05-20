@@ -20,7 +20,10 @@
 	position:absolute;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	padding: 55px;
+	padding: 45px;
+}
+.form-wrap, .ant-form-item-children {
+	display: grid;
 }
 /*logo*/
 .login .img-wrap {
