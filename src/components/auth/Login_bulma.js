@@ -38,36 +38,33 @@ class Login extends Component {
 					<div className="login-form">
 						<form onSubmit={this.handleSubmit}>
 							<div className="form-wrap">
-								<TextField
-									required autoFocus
-									name="username"
-									type="text"
-									placeholder="Username"
-									value={this.state.username}
-									onChange={this.handleChange}
-								/>
-								<TextField
-									required
-									name="password"
-									type="password"
-									placeholder="Password"
-									pattern = "(?=^.{6,}$).*$"
-									title = "Min 6 characters"
-									value={this.state.password}
-									onChange={this.handleChange}
-								/>
-								<BitField
-									name="keepsignedin"
-									type="checkbox"
-									checked={this.state.keepSignedIn}
-									onChange={this.handleChange}
-									displaytext="Keep Signed In"/>
-								<button
-									name="submitbtn"
-									type="submit"
-									className="login-btn">
-									<span className="">Login</span>
-								</button>
+								<div className="field">
+								  <div className="control has-icons-left">
+									<input className="input" type="text" placeholder="Username"/>
+									<span className="icon is-small is-left">
+									  <i className="fas fa-user"></i>
+									</span>
+								  </div>
+								 </div>
+								<div className="field">
+								  <div className="control has-icons-left">
+									<input className="input" type="password" placeholder="Password"/>
+									<span className="icon is-small is-left">
+									  <i className="fas fa-lock"></i>
+									</span>
+								  </div>
+								</div>
+								<div className="field">
+								  <div className="control">
+									<label className="checkbox">
+									  <input type="checkbox"/>
+									  Keep Signed In
+									</label>
+								  </div>
+								</div>
+								<div className="control">
+								  <button className="button is-link is-fullwidth">Submit</button>
+								</div>
 							</div>
 							<div className="links-wrap">
 								<div className="label-wrap">
