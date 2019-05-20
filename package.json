@@ -35,6 +35,9 @@
     "react-bootstrap": "^1.0.0-beta.8"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "antd": "^3.18.2",
+    "bulma": "^0.7.4",
     "classnames": "latest",
     "prop-types": "latest",
     "react": "^16.8.6",
@@ -43,7 +46,5 @@
     "react-modal": "^3.8.1",
     "reactjs-popup": "^1.4.0",
     "semantic-ui-react": "^0.87.1"
-    "@material-ui/core": "^3.9.3",
-    "bulma": "^0.7.4",
   }
 }
