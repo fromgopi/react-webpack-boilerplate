@@ -1,0 +1,59 @@
+
+.local-section {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 46px;
+  padding-bottom: 95px;
+  height: 381px;
+  position: relative;
+}
+
+.local-section-bg-set {
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.local-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  background-color: rgba(77,77,77,.5);
+}
+
+.local-section-h1 {
+  font-size: 47px;
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  z-index: 4;
+  position: relative;
+  font-family: Axiforma-SemiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  text-shadow: 0 1px 8px rgba(0,0,0,.2);
+}
+
+.local-section-h2 {
+  font-weight: 500;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  z-index: 4;
+  position: relative;
+  text-shadow: 0 1px 8px rgba(0,0,0,.4);
+  font-size: 17px;
+}
+
+.local-section-location-div {
+  width: auto;
+  margin: 0 auto;
+  z-index: 4;
+  position: relative;
+}
+
+.clearfix {
+  content: " ";
+  display: table;
+}

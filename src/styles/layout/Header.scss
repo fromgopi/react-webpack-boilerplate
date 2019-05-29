@@ -1,20 +1,22 @@
+$color: #fff;
+
 .fixed-header{
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   /*background: #e9f9f0;*/
   box-shadow:0 1px 15px 0 rgba(0,0,0,.24);
-  height: 13%;
+  height: auto;
 }
 .header-container{
-  padding: 30px;
+  padding: 20px;
 }
 
 .logo {
-  height: 32px;
+  height: 36px;
   float: left;
-  margin-top: -10px;
+  margin-top: -6px;
 }
 
 
@@ -97,7 +99,7 @@
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 0 8px 31px 8px;
+  padding: 0 8px 8px 4px;
   text-decoration: none;
   display: inline-block;
   color: #000000;
@@ -119,7 +121,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #2dc997;
+  background-color: $color;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -127,10 +129,8 @@
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+ul li a:hover, ul li a:focus {
+  color: #323232;
 }
 
 .nav-menu ul {
@@ -156,7 +156,7 @@
 }
 
 .nav-menu ul li a:hover {
-  background: #2dc997;
+  background: $color;
   color: #000;
 }
 
@@ -244,11 +244,11 @@
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #2dc997;
+  color: $color;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #2dc997;
+  color: $color;
 }
 
 #mobile-body-overly {

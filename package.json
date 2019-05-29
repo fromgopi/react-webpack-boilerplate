@@ -31,11 +31,11 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1",
-    "bootstrap": "^4.3.1",
-    "react-bootstrap": "^1.0.0-beta.8"
+    "bootstrap": "^4.3.1"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.0",
     "antd": "^3.18.2",
     "bulma": "^0.7.4",
     "classnames": "latest",
@@ -44,7 +44,6 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-modal": "^3.8.1",
-    "reactjs-popup": "^1.4.0",
-    "semantic-ui-react": "^0.87.1"
+    "reactjs-popup": "^1.4.0"
   }
 }
