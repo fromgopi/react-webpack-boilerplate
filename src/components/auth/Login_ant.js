@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Logo from '../../img/logo.png';
-import TextField from '../common/TextField';
-import BitField from '../common/BitField';
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import 'antd/dist/antd.css';
 
 class Login extends Component {
 	constructor(props) {
@@ -29,6 +29,7 @@ class Login extends Component {
 	};
 
 	render() {
+		const { getFieldDecorator } = this.props.form;
 		return (
 			<div className="login-wrap">
 				<div className="login">
@@ -36,39 +37,38 @@ class Login extends Component {
 						<img className="login-logo" src={Logo} />
 					</div>
 					<div className="login-form">
-						<form onSubmit={this.handleSubmit}>
-							<div className="form-wrap">
-								<TextField
-									required autoFocus
-									name="username"
-									type="text"
-									placeholder="Username"
-									value={this.state.username}
-									onChange={this.handleChange}
-								/>
-								<TextField
-									required
-									name="password"
-									type="password"
-									placeholder="Password"
-									pattern = "(?=^.{6,}$).*$"
-									title = "Min 6 characters"
-									value={this.state.password}
-									onChange={this.handleChange}
-								/>
-								<BitField
-									name="keepsignedin"
-									type="checkbox"
-									checked={this.state.keepSignedIn}
-									onChange={this.handleChange}
-									displaytext="Keep Signed In"/>
-								<button
-									name="submitbtn"
-									type="submit"
-									className="login-btn">
-									<span className="">Login</span>
-								</button>
-							</div>
+						<Form onSubmit={this.handleSubmit} className="login-form">
+							<Form.Item>
+							  {getFieldDecorator('username', {
+								rules: [{ required: true, message: 'Please input your username!' }],
+							  })(
+								<Input
+								  prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+								  placeholder="Username"
+								/>,
+							  )}
+							</Form.Item>
+							<Form.Item>
+							  {getFieldDecorator('password', {
+								rules: [{ required: true, message: 'Please input your Password!' }],
+							  })(
+								<Input
+								  prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+								  type="password"
+								  placeholder="Password"
+								/>,
+							  )}
+							</Form.Item>
+							<Form.Item>
+							  {getFieldDecorator('remember', {
+								valuePropName: 'checked',
+								initialValue: true,
+							  })(<Checkbox>Keep Signed In</Checkbox>)}
+							  <Button type="primary" htmlType="submit" className="login-form-button">
+								Log in
+							  </Button>
+							</Form.Item>
+						  </Form>
 							<div className="links-wrap">
 								<div className="label-wrap">
 									<label className="link-label" onClick={this.handleForgotPassword}>Forgot Password?</label>
@@ -78,7 +78,6 @@ class Login extends Component {
 									<label className="link-label">Register</label>
 								</div>
 							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -86,5 +85,4 @@ class Login extends Component {
 	}
 }
 
-
-export default Login
+export default Form.create()(Login)
