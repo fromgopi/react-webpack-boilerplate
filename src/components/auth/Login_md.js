@@ -11,30 +11,31 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import TextField from "@material-ui/core/TextField";
-import RaisedButton from "@material-ui/core/Button"
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            username: "",
-            password: "",
-            keepSignedIn: false
-        };
+		this.state = {
+			username: "",
+			password: "",
+			keepSignedIn: false
+		};
+	}
 
-        this.onChange = this.onChange.bind(this);
-    }
-
-    componentWillMount() {
-        //All required Hidden fields will go into
-    }
+	componentWillMount() {
+		//All required Hidden fields will go into
+	}
 
 
-    onChange(e) {
-        this.setState({[e.target.name]: e.target.value})
-    }
+	handleChange = e => {
+		var value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
+		this.setState({[e.target.name]: value});
+	};
+	handleSubmit = e => {
+		//Todo: Call backend server with userData and key in the header.
+		e.preventDefault();
+	};
 
 	render() {
 		return (

@@ -1,22 +1,20 @@
-$color: #fff;
-
 .fixed-header{
   width: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   /*background: #e9f9f0;*/
   box-shadow:0 1px 15px 0 rgba(0,0,0,.24);
-  height: auto;
+  height: 13%;
 }
 .header-container{
-  padding: 20px;
+  padding: 30px;
 }
 
 .logo {
-  height: 36px;
+  height: 32px;
   float: left;
-  margin-top: -6px;
+  margin-top: -10px;
 }
 
 
@@ -99,7 +97,7 @@ $color: #fff;
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 0 8px 8px 4px;
+  padding: 0 8px 31px 8px;
   text-decoration: none;
   display: inline-block;
   color: #000000;
@@ -121,7 +119,7 @@ $color: #fff;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: $color;
+  background-color: #2dc997;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -129,8 +127,10 @@ $color: #fff;
   transition: all 0.3s ease-in-out 0s;
 }
 
-ul li a:hover, ul li a:focus {
-  color: #323232;
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .nav-menu ul {
@@ -156,7 +156,7 @@ ul li a:hover, ul li a:focus {
 }
 
 .nav-menu ul li a:hover {
-  background: $color;
+  background: #2dc997;
   color: #000;
 }
 
@@ -244,11 +244,11 @@ ul li a:hover, ul li a:focus {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: $color;
+  color: #2dc997;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: $color;
+  color: #2dc997;
 }
 
 #mobile-body-overly {
