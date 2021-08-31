@@ -1,0 +1,68 @@
+body {
+    background-color: white;
+}
+
+h2 {
+    font-size: 31px;
+    text-align: center;
+    /* margin-bottom: auto; */
+    margin-top: 11px;
+}
+
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* background-color: #00A291; */
+    background-color: #006699;
+    box-shadow: 0 1px 15px 0 rgb(145, 145, 145);
+    height: auto;
+}
+
+.login-form {
+    margin-top: 75px;
+    width: auto;
+    /* max-width: auto; */
+    /* border: 1px solid lightgray; */
+}
+
+.flash-container {
+    position: fixed;
+    width: auto;
+    margin: 5% auto 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+
+main .container-fluid {
+    flex: 1;
+}
+
+.active-color {
+    color: #006699;
+}
+
+.prefix-icon {
+    position: absolute;
+    width: 3rem;
+    font-size: 1.7rem;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    top: auto;
+}
+
+.f-lable {
+    margin-left: 3rem;
+    margin-top: -0.5rem;
+    color: #069;
+}
+
+.btn {
+    background-color: #006699;
+}
+.btn:hover {
+    background-color: #006699;
+}

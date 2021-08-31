@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" integrity="sha512-t38vG/f94E72wz6pCsuuhcOPJlHKwPy+PY+n1+tJFzdte3hsIgYE7iEpgg/StngunGszVMrRfvwZinrza0vMTA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- <h2 style="text-align: center;">Welcome to form</h2> -->
+        <header class="fixed-header">
+            <h2>Welcome to Form</h2>
+        </header>
+        <main>
+            <div class="flash-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row login-form">
+                                <div class="col s12 m6 offset-m3">
+                                    <div class="card">
+                                        <form id="form-id">
+                                            <div class="card-content">
+                                                <div class="form-inputs row">
+                                                    <div class="input-field col s12">
+                                                        <i class="material-icons prefix-icon active-color">email</i>
+                                                        <input id="auth_email" type="email" required="required" style="margin-left: 3rem; width: 40rem; height: 2rem;">
+                                                        <label class="f-lable" for="auth_email">Email</label>
+                                                    </div>
+                                                    <div class="input-field col s12">
+                                                        <i class="material-icons prefix-icon active-color">password</i>
+                                                        <input id="auth_password" type="password" required="required" style="margin-left: 3rem; width: 40rem; height: 2rem;">
+                                                        <label class="f-lable" for="auth_password">Password</label>
+                                                    </div>
+                                                    <p class="col s12">
+                                                        <input type="hidden" name="remember_me">
+                                                        <label for="remember_me">
+                                                            <input id="remember_me" type="checkbox" value="1" checked="checked" class="filled-in checkbox-blue-grey">
+                                                            <span>Remember me</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-action">
+                                                <div class="form-actions center-align">
+                                                    <i class="btn waves-effect waves-input-wrapper">
+                                                        <input class="waves-button-input" type="submit" name="commit" value="Log In" data-disable-with="Log In">
+                                                    </i>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="right-align">
+                                                        <a style="color: #006699;;" href="#">Forgot Password</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class="login-form">
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js" integrity="sha512-m2PhLxj2N91eYrIGU2cmIu2d0SkaE4A14bCjVb9zykvp6WtsdriFCiXQ/8Hdj0kssUB/Nz0dMBcoLsJkSCto0Q==" crossorigin="anonymous"></script>        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
