@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 
-
 // This is the main webpack file for the project to run.
 module.exports = { 
     entry: path.join(__dirname,'src','index.js'),
