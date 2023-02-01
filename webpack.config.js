@@ -9,7 +9,7 @@ module.exports = {
     entry: path.join(__dirname,'src','index.js'),
     output: {  
         path: path.join(__dirname,'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js' 
     },
     mode: process.env.NODE_ENV || 'development',
     resolve: {
