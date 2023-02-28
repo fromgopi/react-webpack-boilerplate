@@ -11,7 +11,7 @@ module.exports = {
         filename: 'bundle.js' 
     },
     mode: process.env.NODE_ENV || 'development',
-    resolve: {
+    resolve: { 
         modules: [path.resolve(__dirname, 'src'), 'node_modules']
     },
     devServer: {
